@@ -1,0 +1,138 @@
+
+body{
+    background:url("https://images.pexels.com/photos/5412137/pexels-photo-5412137.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+#marquee-heading{
+    text-align: center;
+    color: green;
+    animation: marquee 5s linear infinite;
+    padding: 16px 8px;
+}
+nav{
+    border-radius: 30px;    
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  z-index: 1000;
+}
+
+nav a{
+    color: white;
+    font-weight: bolder;
+    margin: auto;
+    padding: auto;
+}
+#aboutpage, #contactpage, #helppage, #feedbackpage{
+    width: 100%;
+    background-color: rgba(211, 211, 211, 0.85);
+    border-radius: 20px;
+    padding: 32px;
+    max-width: 1160px;
+    margin: 20px auto;
+    font-weight: 600;   
+}
+#aboutpage{ min-height: 600px; }
+#contactpage, #helppage{ min-height: 400px; }
+#feedbackpage{ min-height: 520px; }
+#footerdiv{
+    height: 60px;
+    width: 100%;
+    background-color: rgba(169, 169, 169, 0.9);
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 1160px;
+    margin: 20px auto;
+    font-weight: bolder;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+#calcbody{
+    width:850px;
+    height: 465px;
+    
+    background-color: rgba(169, 169, 169, 0.9);
+    border-radius: 10px;
+}
+#calcbody2{
+    width: 830px;
+    height : 100px;
+   background-color: rgba(211, 211, 211, 0.8);
+    border-radius: 10px;
+}
+#calcbody3{
+    width: 820px;
+    height : 320px;
+    background-color: bisque;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#calcbody4{
+    width: 500px;
+    height : 280px;
+    background-color: rgb(169, 169, 169);
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 10px;
+}
+#calcbody5{
+    width: 260px;
+    height : 280px;
+    background-color: rgb(169, 169, 169);
+    border-radius: 10px;
+    margin-left: 530px;
+    margin-top: -280px;
+    padding: 10px;
+}
+
+
+
+.calculator {
+  width: 320px;
+  background-color: rgba(99, 99, 99, 0.8);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);;
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#display {
+  width: 100%;
+  background-color: hsl(0, 0%, 20%);
+  border: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 2rem;
+  text-align: right;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+button {
+    
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: #f0f0f0;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #d2d2d2;
+}

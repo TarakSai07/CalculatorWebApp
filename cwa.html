@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cwa.css">
+    <script src="cwa.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <title>CALCULATOR WEB APP</title>
+</head>
+<body>
+   <h1 id="marquee-heading">CALCULATOR WEB APP</h1>
+<nav class="navbar bg-body-tertiary container">
+        <div class="container-fluid justify-content-start flex-wrap">
+            <a class="btn btn-outline-success me-3" href="cwa.html">HOME</a>
+            <a class="btn btn-outline-secondary me-3" href="#aboutpage">ABOUT</a>
+            <a class="btn btn-outline-success me-3" href="#calculator" id="calculator">CALCULATOR</a>
+            <a class="btn btn-outline-secondary me-3" href="#contactpage">CONTACT</a>
+            <a class="btn btn-outline-secondary me-3" href="#helppage">HELP</a>
+            <a class="btn btn-outline-secondary me-3" href="#feedbackpage">FEEDBACK</a>
+            <a class="btn btn-outline-secondary" href="more.html">MORE</a>
+        </div>
+    </nav>
+
+    <!-- CALCULATOR -->
+<div class="calculator">
+  <input type="text" id="display" readonly />
+  <div class="btns">
+    <button type="button" onclick="addToDisplay('7')">7</button>
+    <button type="button" onclick="addToDisplay('8')">8</button>
+    <button type="button" onclick="addToDisplay('9')">9</button>
+    <button type="button" onclick="clearDisplay()">AC</button>
+    <button type="button" onclick="addToDisplay('4')">4</button>
+    <button type="button" onclick="addToDisplay('5')">5</button>
+    <button type="button" onclick="addToDisplay('6')">6</button>
+    <button type="button" onclick="addToDisplay('*')">*</button>
+    <button type="button" onclick="addToDisplay('1')">1</button>
+    <button type="button" onclick="addToDisplay('2')">2</button>
+    <button type="button" onclick="addToDisplay('3')">3</button>
+    <button type="button" onclick="addToDisplay('-')">-</button>
+    <button type="button" onclick="addToDisplay('.')">.</button>
+    <button type="button" onclick="addToDisplay('0')">0</button>
+    <button type="button" onclick="addToDisplay('00')">00</button>
+    <button type="button" onclick="addToDisplay('+')">+</button>
+    <button type="button" onclick="addToDisplay('%')">%</button>
+    <button type="button" onclick="addToDisplay('/')">/</button>
+    <button type="button" onclick="calculate()">=</button>
+  </div>
+</div>
+
+<script>
+//for calculation functionality
+const display = document.getElementById('display');
+function addToDisplay(input)
+{
+   display.value += input;
+}
+function calculate()
+{
+   try
+   {
+      display.value = eval(display.value);
+   }
+   catch(error)
+   {
+      display.value = "Error";
+   }
+} 
+function clearDisplay()
+{
+  display.value = "";
+}
+</script>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  // jQuery
+  $(document).ready(function () {
+    $("#calculator").click(function () {
+      $(".calculator").fadeToggle('slow'); 
+    });
+  });
+</script>
+
+
+
+<div class="container" id="aboutpage">
+  <section>
+    <h2>About This Calculator App</h2><br>
+    <p>
+      This calculator web app is a simple and intuitive tool designed to perform basic arithmetic operations including addition, subtraction, multiplication, and division. Built with HTML, CSS, and JavaScript, it offers a clean interface and seamless user experience across devices and browsers.
+    </p><br>
+    <p>
+      With features like clear input, decimal handling, and instant calculation results, it serves as a practical utility for everyday calculations. This app also demonstrates core web development skills, combining responsive design with interactive functionality in an accessible format.
+    </p><br>
+    <p>
+      The app is optimized for performance and responsiveness, ensuring it works smoothly on both desktop and mobile devices. Its lightweight design makes it fast to load, providing users a reliable tool without unnecessary delays or resource consumption.
+    </p><br>
+    <p>
+      Accessibility has been taken into consideration by using semantic HTML elements and clear visual cues, making the app usable by a wide range of users, including those relying on assistive technologies.
+    </p><br>
+    <p>
+      This project also serves as a strong foundation for learning more advanced programming concepts such as state management, event handling, and UI design, making it ideal for beginners and learners looking to enhance their web development skills.
+    </p>
+  </section>
+</div>
+
+<div class="container" id="contactpage">
+  <section>
+    <h2>Contact Us</h2><br>
+    <p>
+      We value your feedback, questions, and suggestions. Whether you need support or want to share your experience with our calculator app, feel free to reach out. Our team is here to assist you promptly and effectively.
+    </p><br>
+    <p>
+      You can contact us via email at <a href="mailto:taraksai21295cm058@gmail.com">taraksai21295cm058@gmail.com</a> or use the contact form below to send your message directly. We strive to respond to all inquiries within 24 hours on business days.
+    </p><br>
+    <p>
+      For more immediate assistance, you can also reach us through our social media channels or call our customer support hotline at +91 7207214994. We look forward to hearing from you and improving your experience.
+    </p>
+  </section>
+</div>
+
+<div class="container" id="helppage">
+  <section>
+    <h2>Help & Support</h2><br>
+    <p>
+      If you encounter any issues or have questions about how to use the calculator app, this help section is designed to guide you through the most common functionalities.
+    </p><br>
+    <p>
+      The calculator supports basic arithmetic operations such as addition, subtraction, multiplication, and division. Simply click the number buttons to input values and use the operator buttons for calculations. Press "AC" to clear your current input, and "=" to see the result instantly.
+    </p><br>
+    <p>
+      For any technical support, bug reports, or feature requests, please contact us via the contact page. We are committed to improving your experience and responding as quickly as possible.
+    </p>
+  </section>
+</div>
+
+
+<div id="feedbackpage" class="container my-4">
+  <h2>Submit Feedback</h2>
+  <form id="feedbackForm">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name:</label>
+      <input id="name" name="entry.731513926" type="text" class="form-control" placeholder="Your Name" required />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input id="email" name="entry.1624807803" type="email" class="form-control" placeholder="Your Email" />
+    </div>
+    <div class="mb-3">
+      <label for="rating" class="form-label">Rating:</label>
+      <select id="rating" name="entry.701928223" class="form-select" required>
+        <option value="" disabled selected>Select rating</option>
+        <option value="Excellent (5)">Excellent (5)</option>
+        <option value="Good (4)">Good (4)</option>
+        <option value="Average (3)">Average (3)</option>
+        <option value="Poor (2)">Poor (2)</option>
+        <option value="Very Poor (1)">Very Poor (1)</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="comments" class="form-label">Comments:</label>
+      <textarea id="comments" name="entry.621522683" class="form-control" placeholder="Your feedback..." rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+  </form>
+  <div id="thankYouMessage" class="alert alert-success mt-3" style="display:none;">
+    Thank you for your feedback!
+  </div>
+</div>
+
+
+  <div class="container-fluid" id="footerdiv">
+  <footer class="basic-footer">
+    <p>&copy; 2025 Calculator Web App. By <b>Tarak</b></p>
+    </footer>
+    </div>
+    
+</body>
+</html>
